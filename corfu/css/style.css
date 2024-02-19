@@ -1,0 +1,36 @@
+header {
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-blue {
+    background-color: #006994;
+  }
+  
+  .main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .main p {
+    text-align: justify;
+  }
+  
+  .line {
+    background-color: #006994;
+  }
+  
+  .card-img {
+    height: 250px;
+    border-radius: 10%;
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  footer {
+    background-color: #222525;
+  }

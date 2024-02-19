@@ -1,0 +1,139 @@
+:root {
+    --wedding: #FFE7CC;
+    --navy: #002E94;
+    --blue: #083AA9;
+    --beige: #E1CEB5;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  header {
+    background-color: var(--navy);
+    color: var(--wedding);
+    flex: 1 20%;
+  }
+  
+  .header-title {
+    margin-left: 1rem;
+  }
+  
+  nav ul {
+    width: 100%;
+    /* background-color: aqua; */
+    /* margin-left: 1rem; */
+  }
+
+nav li {
+    list-style: none;
+  }
+  
+  nav li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--wedding);
+  }
+  
+  nav li a:hover {
+    background-color: var(--blue);
+  }
+  
+  main {
+    background-color: #ffe7cc;
+    flex: 1 80%;
+    height: 100vh;
+    overflow: auto;
+  
+  }
+  
+  /* hamburger menu styling */
+  
+  .side-menu {
+    display: none;
+  }
+  
+  .hamb {
+    position: absolute;
+    top: 2.2rem;
+    left: 20rem;
+    cursor: pointer;
+    padding: 10px 10px;
+  }
+  
+  .hamb-line {
+    /* display: block; */
+    display: none;
+    background-color: white;
+    height: 2px;
+    width: 30px;
+    position: relative;
+  }
+  
+  .hamb-line::before,
+  .hamb-line::after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+  
+  .hamb-line::before {
+    top: 5px;
+  }
+  
+  .hamb-line::after {
+    top: -5px;
+  }
+  
+  .side-menu:checked ~ nav.active {
+    display: flex;
+  }
+  
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(45deg);
+    top:0;
+  }
+  
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  @media (max-width:600px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    nav li {
+      text-align: center;
+    }
+  
+    .hamb-line {
+      display: block;
+    }
+  
+    nav.active {
+      display: none;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+  }
